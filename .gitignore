@@ -1,0 +1,15 @@
+# Personal data never leaves your computer
+profile/profile.md
+profile/search.md
+documents/*
+!documents/README.md
+applications/*
+!applications/README.md
+
+# Python / OS
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+Thumbs.db
+.claude/settings.local.json
