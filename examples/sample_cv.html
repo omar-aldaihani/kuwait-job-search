@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sara Al-Example - CV</title>
+<style>
+  @page { size: A4; margin: 14mm 15mm 13mm; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; font: 10.2pt/1.38 "Segoe UI", Calibri, Arial, sans-serif; color: #1b2430; }
+  header { border-bottom: 2px solid #0f4c81; padding-bottom: 7px; margin-bottom: 9px; }
+  h1 { margin: 0; font-size: 21pt; letter-spacing: 0.2px; color: #0f2f4f; }
+  .headline { margin: 1px 0 4px; font-size: 11pt; color: #0f4c81; font-weight: 600; }
+  .contact { margin: 0; font-size: 9.4pt; color: #3d4a5a; }
+  .contact span + span::before { content: "  |  "; color: #9aa6b2; }
+  h2 { margin: 11px 0 4px; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 0.9px;
+       color: #0f4c81; border-bottom: 1px solid #d5dde6; padding-bottom: 2px; }
+  p { margin: 0 0 4px; }
+  .entry { margin-bottom: 7px; break-inside: avoid; }
+  .entry-head { display: flex; justify-content: space-between; gap: 12px; }
+  .entry-title { font-weight: 700; }
+  .entry-org { font-weight: 600; color: #3d4a5a; }
+  .entry-date { white-space: nowrap; color: #3d4a5a; font-size: 9.6pt; }
+  ul { margin: 2px 0 0; padding-left: 16px; }
+  li { margin: 0 0 2px; }
+  .skills { display: grid; grid-template-columns: max-content 1fr; gap: 2px 12px; }
+  .skills b { color: #0f2f4f; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Sara Al-Example</h1>
+  <p class="headline">IT Support Engineer · Networking · Windows & POS systems</p>
+  <p class="contact">
+    <span>Salmiya, Kuwait</span><span>+965 5000 0000</span><span>sara.example@email.com</span><span>linkedin.com/in/sara-example</span><span>github.com/sara-example</span>
+  </p>
+</header>
+
+<h2>Profile</h2>
+<p>Computer engineering graduate with two years of hands-on IT support for small businesses in Kuwait: networks, Windows PCs and point-of-sale systems. Built a Python diagnostic app that finds the cause of internet outages in seconds. Bilingual (Arabic/English) and comfortable explaining technical problems to non-technical staff.</p>
+
+<h2>Skills</h2>
+<div class="skills">
+  <b>Support & networking</b><span>Windows 10/11, Active Directory basics, TCP/IP, DNS, DHCP, Wi-Fi setup, routers & switches, printers, POS terminals</span>
+  <b>Programming</b><span>Python, C/C++, Bash, Git, GitHub Actions</span>
+  <b>Languages</b><span>Arabic (native), English (fluent)</span>
+</div>
+
+<h2>Experience</h2>
+<div class="entry">
+  <div class="entry-head">
+    <div><span class="entry-title">Freelance IT Technician</span>, <span class="entry-org">Self-employed</span>, Kuwait</div>
+    <div class="entry-date">Jan 2024 – Present</div>
+  </div>
+  <ul>
+    <li>Set up and maintain networks, PCs and printers for small retail and office clients across Kuwait.</li>
+    <li>Install and troubleshoot point-of-sale systems, keeping checkout running during business hours.</li>
+  </ul>
+</div>
+
+<h2>Projects</h2>
+<div class="entry">
+  <div class="entry-head">
+    <div><span class="entry-title">IT Check</span> <span class="entry-org">(Python, tkinter, PyInstaller)</span></div>
+    <div class="entry-date">2026</div>
+  </div>
+  <ul>
+    <li>One-click Windows app showing live CPU, memory, disk and ping, with a 4-step internet diagnosis in plain English; tested automatically on Windows and Linux. github.com/sara-example/it-check</li>
+  </ul>
+</div>
+
+<h2>Education</h2>
+<div class="entry">
+  <div class="entry-head">
+    <div><span class="entry-title">B.Sc. Computer Engineering</span>, <span class="entry-org">Example University</span>, USA</div>
+    <div class="entry-date">Dec 2023</div>
+  </div>
+  <ul>
+    <li>Capstone: camera-based smart parking system (C++, image processing). Courses: computer networks, embedded systems, operating systems.</li>
+  </ul>
+</div>
+
+<h2>Certifications &amp; Activities</h2>
+<ul>
+  <li>Vice President, student union (USA branch) – organized events for 300+ students</li>
+</ul>
+</body>
+</html>

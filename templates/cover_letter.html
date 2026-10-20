@@ -1,0 +1,56 @@
+<!doctype html>
+<!--
+  English cover letter template for kuwait-job-search.
+  /apply copies this to applications/<company>_<role>/cover_letter.html and fills it in.
+  Exactly 1 page:  python tools/render_pdf.py .../cover_letter.html --expect-pages 1
+  Keep it to 3-4 short paragraphs (250-350 words). Address a named person when the
+  posting or company site gives one; otherwise "Dear Hiring Manager,".
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{FULL_NAME}} - Cover letter - {{COMPANY}}</title>
+<style>
+  @page { size: A4; margin: 20mm 20mm 18mm; }
+  body { margin: 0; font: 11pt/1.5 "Segoe UI", Calibri, Arial, sans-serif; color: #1b2430; }
+  .sender { border-bottom: 2px solid #0f4c81; padding-bottom: 6px; margin-bottom: 18px; }
+  .sender h1 { margin: 0; font-size: 17pt; color: #0f2f4f; }
+  .sender p { margin: 2px 0 0; font-size: 9.5pt; color: #3d4a5a; }
+  .meta { margin-bottom: 16px; }
+  .meta p { margin: 0; }
+  .subject { font-weight: 700; margin: 14px 0; }
+  p { margin: 0 0 11px; }
+  .signoff { margin-top: 18px; }
+</style>
+</head>
+<body>
+<div class="sender">
+  <h1>{{FULL_NAME}}</h1>
+  <p>{{PHONE}} &nbsp;|&nbsp; {{EMAIL}} &nbsp;|&nbsp; {{LINKEDIN_URL}} &nbsp;|&nbsp; {{CITY}}, Kuwait</p>
+</div>
+
+<div class="meta">
+  <p>{{DATE}}</p>
+  <p>{{RECIPIENT_NAME_OR_HIRING_TEAM}}</p>
+  <p>{{COMPANY}}</p>
+  <p>Kuwait</p>
+</div>
+
+<p class="subject">Application for {{ROLE_TITLE}}{{ - REFERENCE_NUMBER_IF_GIVEN}}</p>
+
+<p>Dear {{SALUTATION}},</p>
+
+<p>{{OPENING: the role, where you saw it, and one sentence on why this company specifically}}</p>
+
+<p>{{MATCH: the 2-3 strongest proofs from the profile that meet the posting's main requirements, with results}}</p>
+
+<p>{{COMPANY_FIT: what you would bring to their team or project, based on verified research; honest about any gap and how you are closing it}}</p>
+
+<p>{{CLOSE: availability, invitation to meet, thanks}}</p>
+
+<div class="signoff">
+  <p>Kind regards,</p>
+  <p><b>{{FULL_NAME}}</b></p>
+</div>
+</body>
+</html>

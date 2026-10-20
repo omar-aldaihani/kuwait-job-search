@@ -1,0 +1,97 @@
+<!doctype html>
+<!--
+  CV template for kuwait-job-search.
+  /apply copies this file to applications/<company>_<role>/cv.html and replaces
+  every {{PLACEHOLDER}} with facts from profile/profile.md. Rules:
+    * One column, real text (no icons-only contact details), so hiring software (ATS) can read it.
+    * A4, 1 page for 0-3 years of experience, 2 pages maximum otherwise.
+    * Delete any section that has nothing true to put in it. Never invent content.
+    * Render with: python tools/render_pdf.py applications/<folder>/cv.html --expect-pages 1
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{FULL_NAME}} - CV</title>
+<style>
+  @page { size: A4; margin: 14mm 15mm 13mm; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; font: 10.2pt/1.38 "Segoe UI", Calibri, Arial, sans-serif; color: #1b2430; }
+  header { border-bottom: 2px solid #0f4c81; padding-bottom: 7px; margin-bottom: 9px; }
+  h1 { margin: 0; font-size: 21pt; letter-spacing: 0.2px; color: #0f2f4f; }
+  .headline { margin: 1px 0 4px; font-size: 11pt; color: #0f4c81; font-weight: 600; }
+  .contact { margin: 0; font-size: 9.4pt; color: #3d4a5a; }
+  .contact span + span::before { content: "  |  "; color: #9aa6b2; }
+  h2 { margin: 11px 0 4px; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 0.9px;
+       color: #0f4c81; border-bottom: 1px solid #d5dde6; padding-bottom: 2px; }
+  p { margin: 0 0 4px; }
+  .entry { margin-bottom: 7px; break-inside: avoid; }
+  .entry-head { display: flex; justify-content: space-between; gap: 12px; }
+  .entry-title { font-weight: 700; }
+  .entry-org { font-weight: 600; color: #3d4a5a; }
+  .entry-date { white-space: nowrap; color: #3d4a5a; font-size: 9.6pt; }
+  ul { margin: 2px 0 0; padding-left: 16px; }
+  li { margin: 0 0 2px; }
+  .skills { display: grid; grid-template-columns: max-content 1fr; gap: 2px 12px; }
+  .skills b { color: #0f2f4f; }
+</style>
+</head>
+<body>
+<header>
+  <h1>{{FULL_NAME}}</h1>
+  <p class="headline">{{TARGET_HEADLINE}}</p>
+  <p class="contact">
+    <span>{{CITY}}, Kuwait</span><span>{{PHONE}}</span><span>{{EMAIL}}</span><span>{{LINKEDIN_URL}}</span><span>{{GITHUB_URL}}</span>
+  </p>
+</header>
+
+<h2>Profile</h2>
+<p>{{PROFILE_SUMMARY_TAILORED_TO_THE_ROLE}}</p>
+
+<h2>Skills</h2>
+<div class="skills">
+  <b>{{SKILL_GROUP_1}}</b><span>{{SKILLS_1}}</span>
+  <b>{{SKILL_GROUP_2}}</b><span>{{SKILLS_2}}</span>
+  <b>Languages</b><span>{{LANGUAGES}}</span>
+</div>
+
+<h2>Experience</h2>
+<div class="entry">
+  <div class="entry-head">
+    <div><span class="entry-title">{{JOB_TITLE}}</span>, <span class="entry-org">{{EMPLOYER}}</span>, {{LOCATION}}</div>
+    <div class="entry-date">{{START}} – {{END}}</div>
+  </div>
+  <ul>
+    <li>{{ACHIEVEMENT_WITH_RESULT}}</li>
+    <li>{{ACHIEVEMENT_WITH_RESULT}}</li>
+  </ul>
+</div>
+
+<h2>Projects</h2>
+<div class="entry">
+  <div class="entry-head">
+    <div><span class="entry-title">{{PROJECT_NAME}}</span> <span class="entry-org">({{TECH_USED}})</span></div>
+    <div class="entry-date">{{YEAR}}</div>
+  </div>
+  <ul>
+    <li>{{WHAT_IT_DOES_AND_RESULT}} {{PROJECT_URL}}</li>
+  </ul>
+</div>
+
+<h2>Education</h2>
+<div class="entry">
+  <div class="entry-head">
+    <div><span class="entry-title">{{DEGREE}}</span>, <span class="entry-org">{{UNIVERSITY}}</span>, {{COUNTRY}}</div>
+    <div class="entry-date">{{GRADUATION}}</div>
+  </div>
+  <ul>
+    <li>{{CAPSTONE_OR_RELEVANT_COURSES}}</li>
+  </ul>
+</div>
+
+<h2>Certifications &amp; Activities</h2>
+<ul>
+  <li>{{CERTIFICATION_OR_LEADERSHIP_ROLE}}</li>
+</ul>
+</body>
+</html>
